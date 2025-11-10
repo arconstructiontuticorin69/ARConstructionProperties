@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Theme utilities */
+:root{
+  --royal: #002349;
+  --gold: #FFD700;
+  --gold-muted: #957C3D;
+}
+
+/* smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* gold helpers */
+.text-gold { color: var(--gold); }
+.bg-gold { background-color: var(--gold); }
+.text-gold-muted { color: var(--gold-muted); }
+
+/* hide scrollbar for the horizontal gallery */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* small utility for overlay buttons */
+.btn-gold {
+  @apply bg-gold text-royal font-semibold px-6 py-2 rounded-full shadow-md;
+}
+
+/* optional small responsive tweaks */
+@media (min-width: 768px) {
+  .hero-title { font-size: 4rem; } /* md hero title override */
+}
