@@ -9,7 +9,7 @@ import {
   FaChevronDown,
 } from "react-icons/fa";
 
-export default function Herosection() {
+export default function HeroSection() {
   const { isOpen } = useMenu();
   const [offsetY, setOffsetY] = useState(0);
   useEffect(() => {
