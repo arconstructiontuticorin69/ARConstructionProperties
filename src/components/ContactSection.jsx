@@ -116,6 +116,18 @@ const ContactSection = () => {
             <button className="w-full bg-[#FFD700] hover:bg-green-600 text-black font-semibold py-3 rounded-md transition">
               SUBMIT
             </button>
+            {/* Success / Error Message */}
+            {status.message && (
+              <div
+                className={`mt-4 p-3 rounded-md text-center text-sm font-medium ${
+                  status.type === "success"
+                    ? "bg-green-600 text-white"
+                    : "bg-red-600 text-white"
+                }`}
+              >
+                {status.message}
+              </div>
+            )}
           </motion.form>
 
           {/* Right - Contact Info */}
