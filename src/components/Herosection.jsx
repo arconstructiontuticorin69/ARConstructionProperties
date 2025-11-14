@@ -52,9 +52,12 @@ export default function Herosection() {
           className="text-xl sm:text-2xl md:text-4xl font-extralight leading-snug text-white mb-6 break-words whitespace-normal"
           style={{ fontFamily: "'Poppins', sans-serif" }}
         >
-          We are a creative team transforming ideas into{" "}
-          <span className="text-[#FFD700] font-light">enduring landmarks</span>{" "}
-          — crafting dreams with{" "}
+          We are a creative team transforming ideas
+          <br />
+          into {" "}
+          <span className="text-[#FFD700] font-light">enduring landmarks</span>
+           {" "} crafting dreams <br />
+          with{" "}
           <span className="text-[#FFD700] font-light">concrete and steel.</span>
         </h2>
 
