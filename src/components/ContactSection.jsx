@@ -29,6 +29,7 @@ const ContactSection = () => {
             type: "success",
           });
           e.target.reset(); // Clear form
+          setTimeout(() => setStatus({ message: "", type: "" }), 3000);
         },
         (error) => {
           console.log(error.text);
