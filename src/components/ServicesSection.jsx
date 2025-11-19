@@ -104,9 +104,18 @@ const ServicesSection = () => {
               </motion.div>
             );
             return s.title === "Interior" ? (
-              <Link to="/interior" key={index}>
-                {card}
-              </Link>
+              <div className="relative" key={index}>
+                <Link to="/interior">{card}</Link>
+
+                {/* ⭐ Inside bottom-center */}
+                <div
+                  className="absolute bottom-2 left-1/2 -translate-x-1/2 
+                    bg-yellow-500 text-black text-xs px-3 py-1 
+                    rounded-md font-semibold shadow"
+                >
+                  View Images
+                </div>
+              </div>
             ) : (
               <div key={index}>{card}</div>
             );
