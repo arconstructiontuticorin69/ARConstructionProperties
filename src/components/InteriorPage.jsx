@@ -77,7 +77,7 @@ const IMAGE_MAP = {
   ],
   properties: [property1],
 
-  realEstate: [realest1, realest2],
+  "real-estate": [realest1, realest2],
 };
 
 const InteriorPage = () => {
@@ -115,6 +115,14 @@ const InteriorPage = () => {
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
+  const titleMap = {
+    interior: "Interior",
+    construction: "Construction",
+    renovation: "Renovation",
+    properties: "Properties",
+    "real-estate": "Real Estate",
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -129,7 +137,7 @@ const InteriorPage = () => {
           transition={{ duration: 0.6 }}
           className="text-3xl font-bold text-[#002349] mb-12"
         >
-          {service.charAt(0).toUpperCase() + service.slice(1)} Works
+          {titleMap[service]} Works
         </motion.h2>
 
         {/* ✅ Grid with Staggered Animation */}

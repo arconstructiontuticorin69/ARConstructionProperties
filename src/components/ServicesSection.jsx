@@ -8,26 +8,31 @@ const SERVICE_LIST = [
     icon: <FaBuilding />,
     title: "Construction",
     quote: "Building dreams brick by brick",
+    slug: "construction",
   },
   {
     icon: <FaPaintRoller />,
     title: "Renovation",
     quote: "Transforming spaces beautifully",
+    slug: "renovation",
   },
   {
     icon: <FaCouch />,
     title: "Interior",
     quote: "Designs that define you",
+    slug: "interior",
   },
   {
     icon: <FaHome />,
     title: "Real Estate",
     quote: "Finding your perfect space",
+    slug: "real-estate",
   },
   {
     icon: <FaHome />,
     title: "Properties",
     quote: "Invest smart, live smarter",
+    slug: "properties",
   },
 ];
 
@@ -105,7 +110,7 @@ const ServicesSection = () => {
             );
             return (
               <div className="relative" key={index}>
-                <Link to={`/service/${s.title.toLowerCase()}`}>{card}</Link>
+                <Link to={`/service/${s.slug}`}>{card}</Link>
 
                 {/* ⭐ Inside bottom-center */}
                 <div
