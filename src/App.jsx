@@ -12,6 +12,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import { MenuProvider } from "./components/MenuContext";
 import InteriorPage from "./components/InteriorPage";
 import ProcessSection from "./components/ProcessSection";
+import AchievementsSection from "./components/AchievementsSection";
 
 function App() {
   return (
@@ -30,11 +31,12 @@ function App() {
                     <ProcessSection />
                     <ServicesSection />
                     <ProjectsSection />
+                    <AchievementsSection />
                     <ContactSection />
                   </>
                 }
               />
-              <Route path="/interior" element={<InteriorPage />} />
+              <Route path="/service/:service" element={<InteriorPage />} />
             </Routes>
           </main>
           <Footer />

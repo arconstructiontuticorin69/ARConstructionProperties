@@ -103,9 +103,9 @@ const ServicesSection = () => {
                 <p className="text-gray-300 text-sm italic">{s.quote}</p>
               </motion.div>
             );
-            return s.title === "Interior" ? (
+            return (
               <div className="relative" key={index}>
-                <Link to="/interior">{card}</Link>
+                <Link to={`/service/${s.title.toLowerCase()}`}>{card}</Link>
 
                 {/* ⭐ Inside bottom-center */}
                 <div
@@ -116,8 +116,6 @@ const ServicesSection = () => {
                   View Images
                 </div>
               </div>
-            ) : (
-              <div key={index}>{card}</div>
             );
           })}
         </div>

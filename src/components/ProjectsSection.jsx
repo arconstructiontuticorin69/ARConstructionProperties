@@ -32,7 +32,7 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="pt-20 pb-6 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         {/* Animated Subheading Section */}
         <motion.div

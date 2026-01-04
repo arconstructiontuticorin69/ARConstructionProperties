@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 
 import interior1 from "../assets/Images/Interior-1.jpeg";
@@ -11,15 +11,34 @@ import interior5 from "../assets/Images/Interior-5.jpeg";
 import interior6 from "../assets/Images/Interior-6.jpeg";
 import interior7 from "../assets/Images/Interior-7.jpeg";
 import interior8 from "../assets/Images/Interior-8.jpeg";
-
-const InteriorPage = () => {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const images = [
+import interior9 from "../assets/Images/Int-1.jpeg";
+import interior10 from "../assets/Images/Int-2.jpeg";
+import interior11 from "../assets/Images/Int-3.jpeg";
+import interior12 from "../assets/Images/Int-4.jpeg";
+import interior13 from "../assets/Images/Int-5.jpeg";
+import interior14 from "../assets/Images/Int-6.jpeg";
+import interior15 from "../assets/Images/Int-7.jpeg";
+import interior16 from "../assets/Images/Int-8.jpeg";
+import interior17 from "../assets/Images/Int-9.jpeg";
+import construction1 from "../assets/Images/cons-1.jpeg";
+import construction2 from "../assets/Images/cons-2.jpeg";
+import construction3 from "../assets/Images/cons-3.jpeg";
+import construction4 from "../assets/Images/cons-4.jpeg";
+import construction5 from "../assets/Images/cons-5.jpeg";
+import construction6 from "../assets/Images/cons-6.jpeg";
+import construction7 from "../assets/Images/cons-7.jpeg";
+import construction8 from "../assets/Images/cons-8.jpeg";
+import renovation1 from "../assets/Images/Renov-1.jpeg";
+import renovation2 from "../assets/Images/Renov-2.jpeg";
+import renovation3 from "../assets/Images/Renov-3.jpeg";
+import renovation4 from "../assets/Images/Renov-4.jpeg";
+import renovation5 from "../assets/Images/Renov-5.jpeg";
+import renovation6 from "../assets/Images/Renov-6.jpeg";
+import realest1 from "../assets/Images/RealEst-1.jpeg";
+import realest2 from "../assets/Images/RealEst-2.jpeg";
+import property1 from "../assets/Images/prop-1.jpeg";
+const IMAGE_MAP = {
+  interior: [
     interior1,
     interior2,
     interior3,
@@ -28,8 +47,48 @@ const InteriorPage = () => {
     interior6,
     interior7,
     interior8,
-  ];
+    interior9,
+    interior10,
+    interior11,
+    interior12,
+    interior13,
+    interior14,
+    interior15,
+    interior16,
+    interior17,
+  ],
+  construction: [
+    construction1,
+    construction2,
+    construction3,
+    construction4,
+    construction5,
+    construction6,
+    construction7,
+    construction8,
+  ],
+  renovation: [
+    renovation1,
+    renovation2,
+    renovation3,
+    renovation4,
+    renovation5,
+    renovation6,
+  ],
+  properties: [property1],
 
+  realEstate: [realest1, realest2],
+};
+
+const InteriorPage = () => {
+  const navigate = useNavigate();
+  const { service } = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [service]);
+
+  const images = IMAGE_MAP[service] || []; // keep your variable name `images`
   const handleBackClick = () => {
     navigate("/");
     setTimeout(() => {
@@ -70,7 +129,7 @@ const InteriorPage = () => {
           transition={{ duration: 0.6 }}
           className="text-3xl font-bold text-[#002349] mb-12"
         >
-          Interior Design Works
+          {service.charAt(0).toUpperCase() + service.slice(1)} Works
         </motion.h2>
 
         {/* ✅ Grid with Staggered Animation */}
@@ -89,10 +148,11 @@ const InteriorPage = () => {
             >
               <motion.img
                 src={img}
-                alt={`interior-${index}`}
+                alt={`${service}-${index}`}
                 className="w-full h-64 object-cover"
                 whileHover={{ scale: 1.08 }}
                 transition={{ duration: 0.25 }}
+                loading="lazy"
               />
             </motion.div>
           ))}
