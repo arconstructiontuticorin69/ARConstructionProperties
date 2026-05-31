@@ -20,14 +20,23 @@ import interior14 from "../assets/Images/Int-6.jpeg";
 import interior15 from "../assets/Images/Int-7.jpeg";
 import interior16 from "../assets/Images/Int-8.jpeg";
 import interior17 from "../assets/Images/Int-9.jpeg";
-import construction1 from "../assets/Images/cons-1.jpeg";
-import construction2 from "../assets/Images/cons-2.jpeg";
-import construction3 from "../assets/Images/cons-3.jpeg";
-import construction4 from "../assets/Images/cons-4.jpeg";
-import construction5 from "../assets/Images/cons-5.jpeg";
-import construction6 from "../assets/Images/cons-6.jpeg";
-import construction7 from "../assets/Images/cons-7.jpeg";
-import construction8 from "../assets/Images/cons-8.jpeg";
+import construction1 from "../assets/Images/cons-9.jpeg";
+import construction2 from "../assets/Images/cons-10.jpeg";
+import construction3 from "../assets/Images/cons-12.jpeg";
+import construction4 from "../assets/Images/cons-13.jpeg";
+import construction5 from "../assets/Images/cons-14.jpeg";
+import construction6 from "../assets/Images/cons-15.jpeg";
+import construction7 from "../assets/Images/cons-16.jpeg";
+import construction8 from "../assets/Images/cons-17.jpeg";
+import construction9 from "../assets/Images/cons-18.jpeg";
+import construction10 from "../assets/Images/cons-19.jpeg";
+import construction11 from "../assets/Images/cons-20.jpeg";
+import construction12 from "../assets/Images/cons-21.jpeg";
+import construction13 from "../assets/Images/cons-22.jpeg";
+import construction14 from "../assets/Images/cons-23.jpeg";
+import construction15 from "../assets/Images/cons-24.jpeg";
+import construction16 from "../assets/Images/cons-25.jpeg";
+import construction17 from "../assets/Images/cons-26.jpeg";
 import renovation1 from "../assets/Images/Renov-1.jpeg";
 import renovation2 from "../assets/Images/Renov-2.jpeg";
 import renovation3 from "../assets/Images/Renov-3.jpeg";
@@ -66,6 +75,15 @@ const IMAGE_MAP = {
     construction6,
     construction7,
     construction8,
+    construction9,
+    construction10,
+    construction11,
+    construction12,
+    construction13,
+    construction14,
+    construction15,
+    construction16,
+    construction17,
   ],
   renovation: [
     renovation1,
